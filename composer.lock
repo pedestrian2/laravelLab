@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2120fa77d42a42b4210cdbe1c114e2",
+    "content-hash": "92da3f0325c6f5cc71ee5f23d40a78ed",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -315,6 +315,66 @@
                 "trusted proxy"
             ],
             "time": "2017-06-15T17:19:42+00:00"
+        },
+        {
+            "name": "gloudemans/shoppingcart",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Crinsane/LaravelShoppingcart.git",
+                "reference": "095a260a7cdd3575b39044738c5db2d50c984e55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Crinsane/LaravelShoppingcart/zipball/095a260a7cdd3575b39044738c5db2d50c984e55",
+                "reference": "095a260a7cdd3575b39044738c5db2d50c984e55",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+                "illuminate/session": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.0",
+                "orchestra/testbench": "~3.1",
+                "phpunit/phpunit": "~5.0|~6.0"
+            },
+            "suggest": {
+                "gloudemans/notify": "Simple flash notifications for Laravel"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gloudemans\\Shoppingcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Gloudemans",
+                    "email": "info@robgloudemans.nl"
+                }
+            ],
+            "description": "Laravel Shoppingcart",
+            "keywords": [
+                "laravel",
+                "shoppingcart"
+            ],
+            "time": "2017-09-02T08:44:31+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2321,6 +2381,39 @@
             "time": "2017-08-15T16:48:10+00:00"
         },
         {
+            "name": "googee/entity",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GooGee/Entity.git",
+                "reference": "cecbdd603c50fc2180aed0a60744c059ee651788"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GooGee/Entity/zipball/cecbdd603c50fc2180aed0a60744c059ee651788",
+                "reference": "cecbdd603c50fc2180aed0a60744c059ee651788",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GooGee\\Entity\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "GooGee",
+                    "email": "mou-gj@live.com"
+                }
+            ],
+            "description": "laravel scaffold generator",
+            "time": "2017-10-23T02:14:52+00:00"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v1.2.2",
             "source": {
@@ -3736,6 +3829,63 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+            "name": "sven/artisan-view",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/svenluijten/artisan-view.git",
+                "reference": "79b4de0227b082100407edfccda01e5c766f10fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/svenluijten/artisan-view/zipball/79b4de0227b082100407edfccda01e5c766f10fd",
+                "reference": "79b4de0227b082100407edfccda01e5c766f10fd",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.4.* || 5.5.*",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^4.0",
+                "mockery/mockery": "^0.9.9",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sven\\ArtisanView\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sven\\ArtisanView\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Luijten",
+                    "email": "svenluijten1995@gmail.com",
+                    "homepage": "https://svenluijten.com"
+                }
+            ],
+            "description": "Manage your views in Laravel projects through artisan",
+            "keywords": [
+                "artisan",
+                "blade",
+                "laravel",
+                "templates",
+                "views"
+            ],
+            "time": "2017-10-14T19:48:04+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.1.0",
             "source": {
@@ -3828,7 +3978,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "googee/entity": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
