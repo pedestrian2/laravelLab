@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/cart', 'CartController');
+
+Route::resource('/articles', 'ArticleController');
+Auth::routes();
