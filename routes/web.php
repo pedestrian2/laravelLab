@@ -20,3 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/cart', 'CartController');
+
+Route::resource('/cal', 'CaculatorController', [
+    'only' => [
+            'index', 
+            'show',
+            'create'
+        ],
+]);
