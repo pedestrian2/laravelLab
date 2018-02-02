@@ -63,6 +63,22 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+        <script>
+
+          // Enable pusher logging - don't include this in production
+          Pusher.logToConsole = true;
+
+          var pusher = new Pusher('722308b6b23bb6a1f369', {
+            cluster: 'ap1',
+            encrypted: true
+          });
+
+          var channel = pusher.subscribe('private-user');
+          channel.bind('App\\Events\\TestEvent', function(data) {
+            alert(data.message);
+          });
+        </script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">

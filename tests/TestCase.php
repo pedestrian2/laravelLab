@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Laracasts\Integrated\Extensions\Laravel as IntegrationTest;
 
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends IntegrationTest
 {
     use CreatesApplication;
 }
