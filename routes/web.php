@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/cart', 'CartController');
+
+Route::get('/pattern/decorator', 'PatternController@decorator');
