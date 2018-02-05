@@ -63,6 +63,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -90,6 +91,45 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+            <div id="test">
+                <span v-bind:title="title">
+                    @{{ message }}
+                </span>
+                <span v-if="seen">
+                    @{{ message }}
+                </span>
+                <span v-for='single in muti'>
+                    @{{single.text}}
+                </span>
+                <button v-on:click='reverseMessage'>依賴反轉</button>
+                <input v-model='message' type="text" id="test_vue">
+            </div>
+            <test-template param='hi!'></test-template>
         </div>
+        <script>
+            var test = new Vue({
+                el: '#test',
+                data: {
+                    message: 'hello world',
+                    title: 'test title',
+                    seen: false,
+                    muti: [
+                        {text: 1},
+                        {text: 2},
+                        {text: 3},
+                    ],
+                },
+                methods: {
+                    reverseMessage: function(){
+                        this.message = this.message.split('').reverse().join('');
+                    }                    
+                }
+            });
+            
+            Vue.component('test-template', {
+                prop: ['param'],
+                template: '<div>this is a test block</div>'
+            });
+        </script>
     </body>
 </html>
